@@ -154,8 +154,12 @@
                         <label class="input--hidden" for="honeypot">Don't fill this out <input type="text" name="honeypot"></label>
                         <button class="button input--full-span" type="submit">Make Contact</button>
                     </form>
-        
+                    <div class="modal__thanks" style="display: none;">
+                            <h2>Thanks for signing up to learn more</h2>
+                            <p>As plans go forward, I'll let you know all the details and you'll be among the first to have the opportunity to sign up for membership!</p>
+                        </div>
                 </div>
+                
     </modal>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
@@ -192,7 +196,8 @@
           
             var $form = $(this);
             $.post($form.attr("action"), $form.serialize()).then(function() {
-              alert("Thank you!");
+              $('.modal__content form').hide();
+              $('.modal__thanks').show();
             });
           });
 
