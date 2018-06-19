@@ -5,7 +5,7 @@
     "node": "^5.10.1"
   },
   "dependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "*",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "*",

@@ -7,13 +7,10 @@
     <title>Learn New CSS Today - Get an experienced mentor to help you or your company up your styling game.</title>
     <link rel="stylesheet" href="/style.css">
    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="theme-color" content="#ffffff">
-
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 </head>
 <body>
 
@@ -74,7 +71,7 @@
         <div class="banner__content">
             <h1 class="banner__title">Get ready to up your Code!</h1>
             <h3 class="banner__subtitle">HTML, CSS and JavaScript have improved dramatically over the past five years. If you want to write clean, efficient code, now is the time to learn. Let me help you realize that potential.</h3>
-            <a href="#" class="banner__cta modal__open">Sign up to learn more</a>
+            <a href="#" class="banner__cta modal__open">Be the first in line</a>
     </div>
     </div>
 <!-- 
@@ -101,18 +98,7 @@
         </div>
         <a href="#" class="bisect__cta modal__open">Start your journey today</a>
     </section>
-
-    <section class="newsletter">
-        <div class="newsletter__content">
-            <h3 class="newsletter__title">Code Contemporary Newsletter</h3>
-            <p>I curate a regular newsletter of contemporary coding standards, tips and tricks from various sources that keep me up to date.</p>
-            <form action="https://tinyletter.com/code-contemporary" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/code-contemporary', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
-                <input type="text" name="email" id="tlemail" placeholder="Your email">
-                <input type="hidden" value="1" name="embed">
-                <button class="button newsletter__button" type="submit" value="Subscribe">Subscribe Now</button>
-            </form>
-        </div>
-    </section>-->
+-->
 
 
     <section class="about">
@@ -127,9 +113,46 @@
     </section>
 
 
+    <section class="newsletter">
+            <div class="newsletter__content">
+                <h3 class="newsletter__title">Code Contemporary Newsletter</h3>
+                <p>I curate a regular newsletter of contemporary coding standards, tips and tricks from various sources that keep me up to date.</p>
+                <form action="https://tinyletter.com/code-contemporary" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/code-contemporary', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true">
+                    <input type="text" name="email" id="tlemail" placeholder="Your email">
+                    <input type="hidden" value="1" name="embed">
+                    <button class="button newsletter__button" type="submit" value="Subscribe">Subscribe Now</button>
+                </form>
+            </div>
+        </section>
+
     <footer class="site-footer">
 
     </footer>
+
+    <modal class="modal">
+
+                <div class="modal__content">
+                    <a href="#" class="modal__close" title="Close sign up form popup">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path fill="#000000" d="M93,93.6c-5.2,5-13.4,5-18.6,0L50,68.7L24.9,93.1c-5.2,5-13.4,5-18.6,0c-5.2-5-5-13.4,0-18.6l25.1-24.4L7,25  C2,19.8,2,11.6,7,6.4c5.2-5,13.4-5,18.6,0L50,31.6L75.1,7.1c5.2-5,13.4-5,18.6,0c5.2,5,5,13.4,0,18.6L68.6,50.1L93,75.2  C98.2,80.4,98,88.6,93,93.6z"></path></svg>
+                    </a> 
+                    <h3 class="modal__title">Sign up to be notified registration is open!</h3>
+                    <form name="contact" netlify-honeypot="honeypot" action="thank-you" netlify class="modal__form">
+                        <label for="name">Full Name <span class="required">*</span><input required type="text" name="Name" placeholder="Let's start with names"></label>
+                        <label for="_reply-to">Email Address <span class="required">*</span> <input type="email" required name="_reply-to" placeholder="I'll only use this to get in touch"></label>
+                        <label for="type">Interest <select name="type">
+                                <option value="null">-- Select an Interest --</option>
+                                <option value="one-on-one">1-on-1 Sessions</option>
+                                <option value="Online Courses">Online Courses</option>
+                                <option value="Company Workshop">Company Workshop</option>
+                                <option value="Other">Other</option>
+        
+                            </select></label>
+                        <label class="input--hidden" for="honeypot">Don't fill this out <input type="text" name="honeypot"></label>
+                        <button class="button input--full-span" type="submit">Make Contact</button>
+                    </form>
+        
+                </div>
+    </modal>
 
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400" rel="stylesheet">
 
