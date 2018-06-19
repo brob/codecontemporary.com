@@ -11,6 +11,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png">
     <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -136,7 +140,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve"><path fill="#000000" d="M93,93.6c-5.2,5-13.4,5-18.6,0L50,68.7L24.9,93.1c-5.2,5-13.4,5-18.6,0c-5.2-5-5-13.4,0-18.6l25.1-24.4L7,25  C2,19.8,2,11.6,7,6.4c5.2-5,13.4-5,18.6,0L50,31.6L75.1,7.1c5.2-5,13.4-5,18.6,0c5.2,5,5,13.4,0,18.6L68.6,50.1L93,75.2  C98.2,80.4,98,88.6,93,93.6z"></path></svg>
                     </a> 
                     <h3 class="modal__title">Sign up to be notified registration is open!</h3>
-                    <form name="contact" netlify-honeypot="honeypot" action="thank-you" netlify class="modal__form">
+                    <form name="contact" netlify-honeypot="honeypot" action="" netlify class="modal__form">
                         <label for="name">Full Name <span class="required">*</span><input required type="text" name="Name" placeholder="Let's start with names"></label>
                         <label for="_reply-to">Email Address <span class="required">*</span> <input type="email" required name="_reply-to" placeholder="I'll only use this to get in touch"></label>
                         <label for="type">Interest <select name="type">
@@ -181,6 +185,17 @@
             if (e) {e.preventDefault();}
             modal.classList.remove('visible');
         }
+
+
+        $(".modal__form").submit(function(e) {
+            e.preventDefault();
+          
+            var $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function() {
+              alert("Thank you!");
+            });
+          });
+
     </script>
  
 </body>
